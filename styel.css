@@ -1,0 +1,461 @@
+/*estilo geral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+}
+
+h2.title {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+
+  span {
+    color: #00ff08;
+  }
+}
+
+.btn-contact button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600px;
+  background-color: #00ff08;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover,
+.btn-send input:hover {
+  box-shadow: 0px 0px 8px #00ff08;
+  transform: scale(1.05);
+  transition: .2s;
+}
+
+.flex {
+  display: flex;
+}
+
+/*fim  do estilo geral*/
+
+/*Header*/
+header {
+  padding: 40px 4%;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+
+}
+
+header>.interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+.logo .img-logo {
+  width: 80px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+header a {
+  color: #7d7d7d;
+  display: inline-block;
+  transition: .2s;
+}
+
+header a:hover {
+  color: #ffff;
+  transform: scale(1.05);
+
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+/*End Header*/
+
+/*Topo do site*/
+section.top-site {
+  padding: 40px 4%;
+
+  .txt-top-site h1,
+  p {
+    color: #ffff;
+  }
+
+  .txt-top-site h1 {
+    font-size: 42px;
+    line-height: 40px;
+  }
+
+  .txt-top-site h1 span {
+    color: #00ff08;
+  }
+
+  .txt-top-site p {
+    margin: 40px 0px;
+  }
+
+}
+
+section.top-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.img-top-site img {
+  border-radius: 80px;
+  position: relative;
+  animation: fly 2s ease-in-out infinite alternate;
+}
+
+@keyframes fly {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 30px;
+  }
+}
+
+/*End topo do site*/
+
+/*Especialidades*/
+section.specialty {
+  padding: 40px 4%;
+
+  .flex {
+    gap: 60px;
+  }
+}
+
+.specialty .specialty-box {
+  color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: .5s;
+
+  i {
+    font-size: 70px;
+    color: #00ff08;
+  }
+
+  h3 {
+    font-size: 28;
+    margin: 15px 0px;
+  }
+}
+
+.specialty .specialty-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 8px #ffffff78;
+}
+
+/*End especialidades*/
+
+/*Acerca*/
+
+section.about {
+  padding: 80px 4%;
+
+  .flex {
+    align-items: center;
+    gap: 60px;
+  }
+
+  .img-about img {
+    border-radius: 20px;
+  }
+
+  .txt-about {
+    color: #fff;
+
+    h2 {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 30px;
+
+      span {
+        display: block;
+        color: #00ff08;
+      }
+    }
+
+    p {
+      margin: 20px 0px;
+      text-align: justify;
+    }
+
+
+
+  }
+}
+
+.btn-media button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #00ff08;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+
+/*PORTIFOLIO*/
+section.portifolio {
+  padding: 80px 4%;
+  box-shadow: 0px 0px 40px 10px #ffffff1d;
+
+  .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+  }
+}
+
+section.portifolio .img-port {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: .8s;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-port-before,
+.img-port-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  border-radius: 40px;
+}
+
+.img-port-slide {
+  left: 100%;
+  transition: left 2.5s;
+}
+
+.img-port:hover .img-port-slide {
+  left: 0%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b0;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600px;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/*End PORTIFOLIO*/
+
+/*Form*/
+
+section.form {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 45px;
+  gap: 10px;
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: #242424;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+  }
+
+  textarea {
+    resize: none;
+    max-height: 200px;
+  }
+
+  .btn-send {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .btn-send input {
+    width: 120px;
+    background-color: #00ff08;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+}
+
+/*End form*/
+
+/*Footer*/
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  .line-hight-footer {
+    padding: 20px 0;
+
+  }
+
+  .border {
+    border-top: 2px solid #00ff08;
+  }
+
+  .line-hight-footer p {
+    i {
+      color: #00ff08;
+      font-size: 22px;
+    }
+
+    a {
+      color: #fff;
+    }
+
+  }
+}
+
+/*End footer*/
+
+/*media query*/
+
+@media screen and (max-width: 1020px) {
+
+  .menu-desktop,
+  .btn-contact {
+    display: none;
+  }
+
+  /*Topo do Site*/
+  .top-site {
+    padding: 20px 8%;
+
+    .flex {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .txt-top-site h1 {
+        font-size: 30px;
+      }
+    }
+
+    .img-top-site img {
+      width: 100%;
+      border-radius: 100%;
+    }
+
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  /*End Topo do site*/
+
+  /*Especialidades*/
+  section.specialty {
+    padding: 40px 8%;
+  }
+
+  h2.title{
+    font-size: 34px;
+    line-height: 30px;
+  }
+ /*End Especialidades*/
+
+ /*About*/
+ section.about{
+    padding: 80px 8%;
+
+    .img-about img {
+      width: 100%;
+    }
+
+    .txt-about h2{
+      font-size: 34px;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    .btn-media{
+      text-align: center;
+    }
+ }
+/*End about*/
+
+/*Portifolio*/
+
+ section.portifolio{
+  padding: 80px 5%;
+
+  .flex{
+    gap: 30px;
+  }
+ }
+
+ img-port{
+  width: 100%;
+  max-width: 360px;
+  margin: 0auto;
+ }
+
+ .line-hight-footer{
+  text-align: center;
+ }
+ footer .flex{
+  flex-direction: column;
+  gap: 20px;
+ }
+
+}
